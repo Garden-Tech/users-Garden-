@@ -169,7 +169,7 @@ void salvarContas() {
     ofstream arquivo("contas.txt");
 
     if (!arquivo.is_open()) {
-        cout << "Erro: nao foi possivel abrir contas.txt para gravacao.\\n";
+        cout << "Erro: nao foi possivel abrir contas.txt para gravacao.\n";
         return;
     }
 
@@ -181,7 +181,7 @@ void salvarContas() {
                 << cpf[i] << ";"
                 << tipoConta[i] << ";"
                 << saldo[i] << ";"
-                << (contaAtiva[i] ? 1 : 0) << '\\n';
+                << (contaAtiva[i] ? 1 : 0) << '\n';
     }
 
     arquivo.close();
@@ -192,7 +192,7 @@ void salvarMovimentacoes() {
     ofstream arquivo("movimentacoes.txt");
 
     if (!arquivo.is_open()) {
-        cout << "Erro: nao foi possivel abrir movimentacoes.txt para gravacao.\\n";
+        cout << "Erro: nao foi possivel abrir movimentacoes.txt para gravacao.\n";
         return;
     }
 
@@ -201,7 +201,7 @@ void salvarMovimentacoes() {
     for (int i = 0; i < quantidadeMovimentacoes; i++) {
         arquivo << contaMovimentacao[i] << ";"
                 << tipoMovimentacao[i] << ";"
-                << valorMovimentacao[i] << '\\n';
+                << valorMovimentacao[i] << '\n';
     }
 
     arquivo.close();
@@ -218,7 +218,7 @@ void carregarContas() {
     string linha;
     while (getline(arquivo, linha)) {
         if (quantidadeContas >= MAX_CONTAS) {
-            cout << "Aviso: limite de contas atingido durante a leitura do arquivo.\\n";
+            cout << "Aviso: limite de contas atingido durante a leitura do arquivo.\n";
             break;
         }
 
@@ -292,7 +292,7 @@ void carregarMovimentacoes() {
     string linha;
     while (getline(arquivo, linha)) {
         if (quantidadeMovimentacoes >= MAX_MOVIMENTACOES) {
-            cout << "Aviso: limite de movimentacoes atingido durante a leitura.\\n";
+            cout << "Aviso: limite de movimentacoes atingido durante a leitura.\n";
             break;
         }
 
